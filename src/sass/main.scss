@@ -1,0 +1,75 @@
+@import 'normalize';
+
+html {
+    font-family: 'Ruluko', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #DE5757;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.icon {
+    font-size: 10rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.wi {
+    color: white;
+}
+
+.city {
+    font-size: 3rem;
+    margin-bottom: 2.5rem;
+}
+
+.temp {
+    font-size: 1.5rem;
+}
+
+#search-box {
+    margin: 4rem 0;
+    background: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: end;
+}
+
+.input {
+    padding: 0.75rem 1rem;
+    background: none;
+    font-size: 1.25rem;
+}
+
+.input-btn {
+    padding: 0.75rem 1rem;
+    padding-bottom: 0.5rem;
+    background: none;
+    color: gray;
+    font-size: 1.5rem;
+    vertical-align: bottom;
+
+    &:hover, &:active {
+        color: #DE5757;
+    }
+}
+
+.date {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.time {
+    font-size: 1.75rem;
+}
