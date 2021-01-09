@@ -5,6 +5,11 @@ html {
 }
 
 body {
+    background: #DE5757;
+    overflow: hidden;
+}
+
+.wrap {
     height: 100vh;
     width: 80%;
     margin: 0 auto;
@@ -12,10 +17,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #DE5757;
     color: white;
     text-align: center;
-    overflow: hidden;
 }
 
 .icon {
@@ -24,13 +27,9 @@ body {
     color: white;
 }
 
-.wi {
-    color: white;
-}
-
 .city {
     font-size: 3rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .temp {
@@ -38,7 +37,7 @@ body {
 }
 
 #search-box {
-    margin: 4rem 0;
+    margin: 3.5rem 0;
     background: white;
     border-radius: 4px;
     display: flex;
