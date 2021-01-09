@@ -10,7 +10,7 @@ body {
 }
 
 .wrap {
-    height: 700px; 
+    height: 100vh; 
     width: 80%;
     margin: 0 auto;
     display: flex;
@@ -22,14 +22,14 @@ body {
 }
 
 .icon {
-    font-size: 10rem;
+    font-size: 9rem;
     margin-bottom: 2rem;
     color: white;
 }
 
 .city {
     font-size: 3rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .temp {
@@ -37,7 +37,7 @@ body {
 }
 
 #search-box {
-    margin: 3.5rem 0;
+    margin: 3rem 0;
     background: white;
     border-radius: 4px;
     display: flex;
@@ -65,7 +65,7 @@ body {
 
 .date {
     font-size: 1.75rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     letter-spacing: 1px;
 }
 
