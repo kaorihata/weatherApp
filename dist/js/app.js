@@ -80,3 +80,18 @@ let hourMin = moment().format("LT");
 
 date.innerText = `${day}, ${monYear}`;
 time.innerText = `${hourMin}`;
+
+/* 
+
+  click circle button to choose background color.
+
+*/
+
+const inputColor = document.querySelector('input[type="color"]');
+
+inputColor.addEventListener("change", () => {
+  let colorValue = inputColor.value;
+  
+  document.body.style.backgroundColor = colorValue;
+  inputColor.style.backgroundColor = colorValue;
+});

@@ -56,11 +56,35 @@ img{
 *:focus {
     outline: none;
 }
-input[type="text"],input[type="email"],input[type="tel"],input[type="button"],input[type="submit"],input[type="password"],button{
+input,button{
     font-family: inherit;
     border: none;
     outline: none;
+
+    &:focus {
+        outline: none;
+    }
 }
-input[type="button"],input[type="submit"],button{
+input[type="button"],input[type="submit"], input[type="color"],button{
     cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+::-webkit-color-swatch{
+  border: 0;
+  border-radius: 0;
+}
+
+::-moz-color-swatch,
+::-moz-focus-inner{
+  border: 0;
+}
+
+::-moz-focus-inner{
+  padding: 0;
 }
