@@ -2,7 +2,7 @@
 
   there are two functions in the area before search-box which is used for showing current weather.
 
-  First, loading default weather data - location setting in Taipei. 
+  First, loading default weather data - location setting is Taipei. 
 
   Second, updating weather data depending on user's choice.
 
@@ -22,26 +22,26 @@ const api = {
 }
 
 // default weather location - taipei 
-window.addEventListener('load', () => {
+function loadWeather(){
   fetch(`${api.base}weather?q=taipei&units=metric&appid=${api.key}`)
-  .then(response => response.json())
-  .then(data => {
-    const weatherDefault = `
+    .then((response) => response.json())
+    .then((data) => {
+      const weatherDefault = `
       <i class="icon wi wi-night-sleet wi-owm-${data.weather[0].id}"></i>
       <h1 class="city">${data.name}</h1>
       <p class="temp">${Math.round(data.main.temp)}<sup>°C</sup></p> 
-    `
-    weather.innerHTML = weatherDefault;
+    `;
+      weather.innerHTML = weatherDefault;
 
-    console.log(data,data.name,data.weather[0].id, Math.round(data.main.temp));
-  })
-});
+      // console.log(data.name,data.weather[0].id, Math.round(data.main.temp));
+    });
+}
 
 // update weather location
-button.addEventListener('click', () => {
+function updateWeather(){
   fetch(`${api.base}weather?q=${input.value}&units=metric&appid=${api.key}`)
-    .then(response => response.json())
-    .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
       const weatherUpdate = `
         <i class="icon wi wi-night-sleet wi-owm-${data.weather[0].id}"></i>
         <h1 class="city">${data.name}</h1>
@@ -52,15 +52,18 @@ button.addEventListener('click', () => {
 
       // console.log(data.name,data.weather[0].id, Math.round(data.main.temp));
     })
-    .catch(err => {
+    .catch((err) => {
       const error = `
                     <p class="err">Wrong City Name!</p>
                     <p class="err">Please try again.</p> 
                     `;
 
       weather.innerHTML = error;
-    })
-})
+    });
+}
+
+window.addEventListener("load", loadWeather);
+button.addEventListener("click", updateWeather);
 
 
 /* 
