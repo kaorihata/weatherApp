@@ -54,10 +54,11 @@ function updateWeather(){
     })
     .catch((err) => {
       if(inputPlace.value) {
-        const error = `
-              <p class="err">Wrong City Name!</p>
-              <p class="err">Please try again.</p> 
-              `;
+        const error = 
+        `
+          <p class="err">Wrong City Name!</p>
+          <p class="err">Please try again.</p> 
+         `;
 
         weather.innerHTML = error;
       }
@@ -66,7 +67,7 @@ function updateWeather(){
 
 window.addEventListener("load", loadWeather);
 button.addEventListener("click", updateWeather);
-inputPlace.addEventListener("keypress", (e) => {
+inputPlace.addEventListener("keydown", (e) => {
     if (e.keyCode === 13) {
       updateWeather();
       inputPlace.blur();
