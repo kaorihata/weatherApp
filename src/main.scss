@@ -7,7 +7,7 @@ html {
 
 body {
     background: #DE5757;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .wrap {
@@ -89,3 +89,6 @@ body {
     line-height: 1.6;
     color: black;
 }
+
+body { font-size: 16px; }
+input, select { font-size: 100%; }

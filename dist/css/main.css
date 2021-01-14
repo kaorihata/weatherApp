@@ -145,7 +145,7 @@ html {
 
 body {
   background: #DE5757;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .wrap {
@@ -225,5 +225,13 @@ body {
   font-size: 1.5rem;
   line-height: 1.6;
   color: black;
+}
+
+body {
+  font-size: 16px;
+}
+
+input, select {
+  font-size: 100%;
 }
 /*# sourceMappingURL=main.css.map */
