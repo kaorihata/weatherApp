@@ -145,6 +145,7 @@ html {
 
 body {
   background: #DE5757;
+  overflow: hidden;
 }
 
 .wrap {
