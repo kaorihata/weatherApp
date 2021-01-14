@@ -107,7 +107,3 @@ inputColor.addEventListener("change", changeBackground);
 
 */
 
-inputPlace.onfocus = () => {
-  window.scrollTo(0, 0);
-  document.body.scrollTop = 0;
-}
