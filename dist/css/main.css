@@ -102,6 +102,12 @@ a {
   padding: 0;
 }
 
+@media screen and (max-width: 576px) {
+  input, select, textarea {
+    font-size: 16px;
+  }
+}
+
 .wrap {
   position: relative;
 }
