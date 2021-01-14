@@ -159,6 +159,7 @@ body {
   grid-gap: 2rem;
   justify-content: center;
   align-items: center;
+  padding: 1.5rem 15px 0;
 }
 
 #weather {
@@ -225,13 +226,5 @@ body {
   font-size: 1.5rem;
   line-height: 1.6;
   color: black;
-}
-
-body {
-  font-size: 16px;
-}
-
-input, select {
-  font-size: 100%;
 }
 /*# sourceMappingURL=main.css.map */
