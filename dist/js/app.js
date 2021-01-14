@@ -53,12 +53,14 @@ function updateWeather(){
       // console.log(data.name,data.weather[0].id, Math.round(data.main.temp));
     })
     .catch((err) => {
-      const error = `
-                    <p class="err">Wrong City Name!</p>
-                    <p class="err">Please try again.</p> 
-                    `;
+      if(inputPlace.value) {
+        const error = `
+              <p class="err">Wrong City Name!</p>
+              <p class="err">Please try again.</p> 
+              `;
 
-      weather.innerHTML = error;
+        weather.innerHTML = error;
+      }
     });
 }
 
