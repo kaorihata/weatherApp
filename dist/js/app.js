@@ -107,3 +107,8 @@ inputColor.addEventListener("change", changeBackground);
 
 */
 
+function goTop() {
+  window.scrollTo(0, 0);
+}
+
+inputPlace.addEventListener('blur', goTop);
