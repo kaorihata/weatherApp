@@ -54,10 +54,11 @@ function updateWeather(){
     })
     .catch((err) => {
       if(inputPlace.value) {
-        const error = `
-              <p class="err">Wrong City Name!</p>
-              <p class="err">Please try again.</p> 
-              `;
+        const error = 
+        `
+          <p class="err">Wrong City Name!</p>
+          <p class="err">Please try again.</p> 
+         `;
 
         weather.innerHTML = error;
       }
