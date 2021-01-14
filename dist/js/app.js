@@ -64,6 +64,11 @@ function updateWeather(){
 
 window.addEventListener("load", loadWeather);
 button.addEventListener("click", updateWeather);
+inputPlace.addEventListener("keypress", (e) => {
+    if (e.keyCode === 13) {
+      updateWeather();
+    }
+})
 
 
 /* 
