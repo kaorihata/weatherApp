@@ -11,7 +11,7 @@
 */
 
 const button = document.querySelector('.input-btn');
-const input = document.querySelector('.input');
+const inputPlace = document.querySelector('.input');
 const weather = document.getElementById('weather');
 
 
@@ -39,7 +39,7 @@ function loadWeather(){
 
 // update weather location
 function updateWeather(){
-  fetch(`${api.base}weather?q=${input.value}&units=metric&appid=${api.key}`)
+  fetch(`${api.base}weather?q=${inputPlace.value}&units=metric&appid=${api.key}`)
     .then((response) => response.json())
     .then((data) => {
       const weatherUpdate = `
@@ -92,9 +92,22 @@ time.innerText = `${hourMin}`;
 
 const inputColor = document.querySelector('input[type="color"]');
 
-inputColor.addEventListener("change", () => {
+function changeBackground(){
   let colorValue = inputColor.value;
-  
+
   document.body.style.backgroundColor = colorValue;
   inputColor.style.backgroundColor = colorValue;
-});
+}
+
+inputColor.addEventListener("change", changeBackground);
+
+/* 
+
+  Resolve input focus issue
+
+*/
+
+inputPlace.onfocus = () => {
+  window.scrollTo(0, 0);
+  document.body.scrollTop = 0;
+}
