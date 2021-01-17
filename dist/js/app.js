@@ -6,7 +6,7 @@
 
   Second, updating weather data depending on user's choice.
 
-  // weather data from openweathermap
+  * weather data from openweathermap
 
 */
 
@@ -37,7 +37,7 @@ function loadWeather(){
     });
 }
 
-// update weather location
+// update weather location - user's input
 function updateWeather(){
   fetch(`${api.base}weather?q=${inputPlace.value}&units=metric&appid=${api.key}`)
     .then((response) => response.json())
@@ -79,7 +79,7 @@ inputPlace.addEventListener("keydown", (e) => {
 
   The area after search-box is used to show current time based on user's location.
 
-  // current time info from moment.js
+  * current time info from moment.js
   
 */
 
