@@ -1,12 +1,12 @@
 ## Weather app
 
-[![demo](demo.png)](https://kaorihata.github.io/weatherapp/)
-<br/>
+[![demo](demo.png)](https://kaorihata.github.io/weatherApp/)
+<br>
 
 ### Description
 ---
 Simple UI interface with interactive design. Users can easily search the weather of current location or other cities and dynamically change background color.
-<br/>
+<br>
 
 ### Main Features
 ---
@@ -15,7 +15,7 @@ Simple UI interface with interactive design. Users can easily search the weather
 - Customized Background Color
 - Cross Browser Support
 - Built With HTML5, CSS, SASS, and JavaScript
-<br/>
+<br>
 
 ### Credits
 ---
