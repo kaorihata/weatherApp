@@ -222,6 +222,10 @@ body {
   font-size: 1.75rem;
 }
 
+.loading {
+  font-size: 1.5rem;
+}
+
 .err {
   font-size: 1.5rem;
   line-height: 1.6;

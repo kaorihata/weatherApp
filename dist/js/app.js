@@ -6,7 +6,7 @@
 
   Second, updating weather data depending on user's choice.
 
-  * weather data from openweathermap API
+  * weather data from openWeatherMap API
 
 */
 
@@ -22,16 +22,21 @@ const api = {
 
 // default weather location - taipei 
 function loadWeather(){
-  axios.get(`${api.base}weather?q=taipei&units=metric&appid=${api.key}`)
+    axios.get(`${api.base}weather?q=taipei&units=metric&appid=${api.key}`)
     .then(res => {
-      const weatherDefault = `
-      <i class="icon wi wi-night-sleet wi-owm-${res.data.weather[0].id}"></i>
-      <h1 class="city">${res.data.name}</h1>
-      <p class="temp">${Math.round(res.data.main.temp)}<sup>°C</sup></p> 
+      const loading = `
+        <p class="loading">Loading...</p>
       `;
-      
-      weather.innerHTML = weatherDefault;
-
+      weather.innerHTML = loading
+      setTimeout(() => {
+        const weatherDefault = `
+        <i class="icon wi wi-night-sleet wi-owm-${res.data.weather[0].id}"></i>
+        <h1 class="city">${res.data.name}</h1>
+        <p class="temp">${Math.round(res.data.main.temp)}<sup>°C</sup></p> 
+        `;
+        
+        weather.innerHTML = weatherDefault;
+      }, 1000)
       // console.log(data.name,data.weather[0].id, Math.round(data.main.temp));
     });
 }
@@ -50,8 +55,8 @@ function updateWeather(){
 
       // get countryId to updateTime
       const countryId = res.data.sys.country;
+      // console.log(data.name, data.weather[0].id, Math.round(data.main.temp),data.sys.country);
       return countryId
-      // console.log(data.name,data.weather[0].id, Math.round(data.main.temp),data.sys.country);
     })
     .catch(err => {
       if(inputPlace.value) {
@@ -101,7 +106,7 @@ function updateTime(){
     date.innerText = `${day}, ${monYear}`;
     time.innerText = `${hourMin}`;
     
-    // console.log(data, timeZone[0].aliasOf);
+    console.log(data, timeZone[0].aliasOf);
     // console.log(day,monYear, hourMin)
   })
 }
