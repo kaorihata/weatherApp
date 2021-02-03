@@ -1,5 +1,5 @@
 @import './normalize';
-@import './colorpicker';
+@import 'colorPick';
 
 html {
     font-family: 'Ruluko', sans-serif;
@@ -83,6 +83,12 @@ body {
 .time {
     font-size: 1.75rem;
 }
+
+// loading
+.loading {
+    font-size: 1.5rem;
+}
+
 
 // error message
 .err {
