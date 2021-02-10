@@ -16,7 +16,7 @@ const weather = document.getElementById('weather');
 
 // API setting
 const api = {
-  key: "3d716a0e2a794f526b62dcd5f05c9440",
+  key: "068c66fb28702d26e797806f91b0ac93",
   base: "https://api.openweathermap.org/data/2.5/"
 }
 
