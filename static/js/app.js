@@ -96,17 +96,17 @@ function loadTime(){
 // update time - user inputted location
 function updateTime(){
   updateWeather().then(res => {
-    let data = ct.getTimezonesForCountry(`${res}`);
+    let data = moment.tz.zonesForCountry(res);
     let timeZone = data[0].aliasOf;
 
-    let monYear = moment().tz(`${timeZone}`).format("LL");
-    let day = moment().tz(`${timeZone}`).format("ddd");
-    let hourMin = moment().tz(`${timeZone}`).format("LT");
+    let monYear = moment.tz(timeZone).format("LL");
+    let day = moment.tz(timeZone).format("ddd");
+    let hourMin = moment.tz(timeZone).format("LT");
 
     date.innerText = `${day}, ${monYear}`;
     time.innerText = `${hourMin}`;
     
-    console.log(data, timeZone[0].aliasOf);
+    // console.log(data);
     // console.log(day,monYear, hourMin)
   })
 }
