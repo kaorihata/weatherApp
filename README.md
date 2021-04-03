@@ -24,4 +24,4 @@ City Weather is an easy-to-use weather application that allows users to search t
 - Iconify
 - Weather Icons
 - Moment.js
-- Moment Timezone
+- Moment Timezoned
